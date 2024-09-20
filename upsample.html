@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Virtual Dressing Room</title>
+    <link rel="stylesheet" href="styleup.css">
+</head>
+<body>
+
+  <!-- Heading Section -->
+  <div class="header-container">
+    <h1>BharatVarta</h1>
+    <img src="logo-animated.gif" alt="Logo" class="header-image">
+    <h2>Uttar Pradesh</h2>
+  </div>
+  <p>
+    Uttar Pradesh, located in northern India, is known for its deep cultural and historical significance. It is home to iconic landmarks such as the Taj Mahal, the ancient city of Varanasi, and the revered Kumbh Mela. The state offers a rich tapestry of art, tradition, and history, showcasing the diverse and colorful heritage of India.
+  </p>
+  <img src="upimage.jpg" alt="up_image" width="100%">
+
+  <!-- Audio Control Section -->
+  <div class="audio-controls">
+    <label class="switch">
+      <input type="checkbox" id="playPauseCheckbox">
+      <span class="slider"></span>
+    </label>
+    <span class="label">Play/Pause State Song</span>
+    <div class="volume-control">
+      <label>Volume: 
+        <input type="range" id="volumeControl" min="0" max="1" step="0.1" value="0.5">
+      </label>
+    </div>
+  </div>
+
+
+  <!-- Cultural Section -->
+  <div class="section">
+    <div class="section-heading">Culture</div>
+    <div class="grid">
+      <div class="grid-item" data-title="Traditional Dance">
+        <img src="cultural_dance.jpeg" alt="Traditional Dance" height="80%" width="50%" >
+      </div>
+      <div class="grid-item" data-title="Local Handicrafts">
+        <img src="culture_art.jpeg" alt="Local Handicrafts" height="80%" width="50%" >
+      </div>
+      <div class="grid-item" data-title="Festivals">
+        <img src="culture_festival.jpeg" alt="Festivals" height="80%" width="50%" >
+      </div>
+    </div>
+  </div>
+  
+  <!-- Heritage Sites Section -->
+  <div class="section">
+    <div class="section-heading">Heritage Sites</div>
+    <div class="grid">
+      <div class="grid-item" data-title="Taj Mahal">
+        <a href="heritage.html"><img src="Taj_Mahal.jpg" alt="Taj Mahal" height="80%" width="50%" >Click here to have 360 view</a>
+      </div>
+      <div class="grid-item" data-title="Varanasi Ghats">
+        <img src="varanasi_ghat1.jpeg" alt="Varanasi Ghats" height="80%" width="50%">
+      </div>
+      <div class="grid-item" data-title="Fatehpur Sikri">
+        <img src="fatepursikre.jpeg" alt="Fatehpur Sikri" height="80%" width="50%">
+      </div>
+    </div>
+  </div>
+ 
+  <!-- Attire Section -->
+<div class="section">
+    <div class="section-heading">Attire</div>
+    
+    <!-- Fashion Show Presentation -->
+    <div class="fashion-show">
+      <img id="attire-image" src="saree.jpeg" alt="Attire Image" width="300">
+      <div class="fashion-show-buttons">
+        <button id="prevBtn">Previous</button>
+        <button id="nextBtn">Next</button>
+      </div>
+    </div>
+    
+    <!-- Virtual Dressing Room -->
+    <div class="virtual-dressing-room">
+      <h3>Try On Different Attire</h3>
+      <label for="attire-select">Choose an attire to view:</label>
+      <select id="attire-select">
+        <option value="saree.jpeg">Saree</option>
+        <option value="sherwani.jpg">Sherwani</option>
+        <option value="lehanga.jpeg">Lehanga</option>
+      </select>
+      <input type="file" id="upload-image" accept="image/*">
+      <img id="dressing-room-image" src="saree.jpeg" alt="Dressing Room Image" width="300">
+    </div>
+  
+    <!-- Quiz About Attire Styles -->
+    <div class="quiz-container">
+      <h3>Attire Quiz</h3>
+      <p>Which attire is traditionally worn by women in Uttar Pradesh during festivals?</p>
+      <label>
+        <input type="radio" name="attire-quiz" value="Saree">
+        Saree
+      </label>
+      <label>
+        <input type="radio" name="attire-quiz" value="Sherwani">
+        Sherwani
+      </label>
+      <label>
+        <input type="radio" name="attire-quiz" value="Lehanga">
+        Lehanga
+      </label>
+      <button id="submit-quiz">Submit Answer</button>
+      <p id="quiz-result"></p>
+    </div>
+  </div>
+  
+  <!-- Language Section -->
+  <div class="section">
+    <div class="section-heading">Languages</div>
+    <p>
+      Uttar Pradesh is home to a variety of languages, with Hindi being the most widely spoken. Other significant languages include Urdu, Bhojpuri, and Awadhi. These languages have rich literary traditions and are an integral part of the state's cultural identity.
+    </p>
+
+    <!-- Language Translation Game -->
+    <div class="language-game">
+      <h3>Learn Common Phrases</h3>
+      <p>Translate the following phrase to Hindi or Urdu:</p>
+      
+      <label for="phrase">Choose a phrase:</label>
+      <select id="phrase">
+        <option value="hello">Hello</option>
+        <option value="thank-you">Thank You</option>
+        <option value="how-are-you">How are you?</option>
+      </select>
+
+      <div class="translation-output">
+        <p>Translation in Hindi: <span id="hindi-output"></span></p>
+        <p>Translation in Urdu: <span id="urdu-output"></span></p>
+      </div>
+    </div>
+  </div>
+
+  </div> <!-- Closing container -->
+
+  <!-- Script to control audio and translation game -->
+  
+<script>
+    // Audio control logic
+    var audio = new Audio('UTTAR PRADESH State ANTHEM- Written by Inspector KULDEEP SINGH.mp3');
+    var playPauseCheckbox = document.getElementById('playPauseCheckbox');
+    var volumeControl = document.getElementById('volumeControl');
+
+    playPauseCheckbox.addEventListener('change', function() {
+      if (this.checked) {
+        audio.play();
+      } else {
+        audio.pause();
+      }
+    });
+
+    volumeControl.addEventListener('input', function() {
+      audio.volume = this.value;
+    });
+
+    // Language translation tool
+    const hindiTranslations = {
+      hello: 'नमस्ते',
+      'thank-you': 'धन्यवाद',
+      'how-are-you': 'आप कैसे हैं?'
+    };
+
+    const urduTranslations = {
+      hello: 'السلام علیکم',
+      'thank-you': 'شکریہ',
+      'how-are-you': 'آپ کیسے ہیں؟'
+    };
+
+    document.getElementById('phrase').addEventListener('change', function() {
+      const selectedPhrase = this.value;
+      document.getElementById('hindi-output').innerText = hindiTranslations[selectedPhrase];
+      document.getElementById('urdu-output').innerText = urduTranslations[selectedPhrase];
+    });
+
+  </script>
+  <script src="mapdata1.js"></script>
+  <script src="mapdata.js"></script>
+  <script src="Attires.js"></script>
+
+</body>
+</html>
