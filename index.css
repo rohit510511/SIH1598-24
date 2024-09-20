@@ -1,0 +1,491 @@
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: background-color 1s, color 1s;
+}
+
+body.flipped-colors {
+    background-color: black;
+    color: white;
+}
+
+/* Taskbar styles */
+.taskbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    padding: 5px 30px;
+    border-bottom: 2px solid #ccc;
+}
+
+.taskbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    padding: 5px 30px;
+    border-bottom: 2px solid #ccc;
+}
+
+.taskbar .title {
+    font-size: 40px; /* Larger title */
+    cursor: pointer;
+    color: black;
+    font-family: 'Arial', sans-serif; /* Changed the font */
+    transition: color 0.3s ease;
+}
+
+.taskbar .title:hover {
+    color: #555;
+}
+
+.taskbar .menu {
+    display: flex;
+    align-items: center;
+}
+
+.taskbar .menu a {
+    text-decoration: none;
+    color: black;
+    margin-right: 20px;
+    font-size: 20px;
+    padding: 8px 12px;
+    transition: color 0.3s;
+}
+
+.taskbar .menu a:hover {
+    color: #888;
+}
+
+.search-bar {
+    padding: 8px 15px;
+    font-size: 18px;
+    border: 2px solid #ccc;
+    border-radius: 20px;
+    transition: border-color 0.3s ease;
+}
+
+.search-bar:focus {
+    outline: none;
+    border-color: #888;
+}
+
+/* Flex Boxes Section */
+.container {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 40px; /* Added padding to the left and right for space */
+    gap: 10px; /* Close gap between boxes */
+}
+
+/* Bigger and Shorter Flex Boxes */
+.flex-box {
+    width: 23%; /* Keeps the same width */
+    height: 600px; /* Shortened the boxes */
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.image-container {
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.3s ease;
+}
+
+/* Zoom effect on hover */
+.flex-box:hover img {
+    transform: scale(1.05);
+}
+
+/* Transparent Explore Button directly on the image */
+.explore-btn {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    background-color: rgba(0, 0, 0, 0.2);
+    color: white;
+    text-decoration: none;
+    border-radius: 2px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.explore-btn:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+}
+
+/* Discover India Section */
+.discover-india {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #f9f9f9; /* Light background for the section */
+}
+
+.discover-india h2 {
+    font-size: 45px;
+    margin-bottom: 20px;
+    color: black;
+    font-family: 'Arial', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px; /* Slightly spaced letters */
+}
+
+.explore-section {
+    padding: 20px 0;
+}
+
+.explore-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Space between boxes */
+    justify-content: center;
+}
+
+/* Updated Flex Boxes for Discover India Section */
+.explore-box {
+    width: 28%; /* Adjusted width to fit 3 items in a row */
+    height: 400px; /* Adjusted height */
+    background-color: #fff;
+    border-radius: 12px; /* Slightly rounded corners for a cute effect */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative; /* Ensure relative positioning for text */
+    overflow: hidden; /* Hide overflow to ensure text and image fit properly */
+    transition: transform 0.3s ease;
+}
+
+.explore-box .image-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.explore-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.3s ease;
+}
+
+.explore-box h3 {
+    font-size: 48px; /* Increase font size for better visibility */
+    color: rgb(40, 38, 38);
+    font-family: 'Arial', sans-serif;
+    font-weight: bold; /* Make text bold */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Add text shadow for better readability */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center text vertically and horizontally */
+    margin: 0;
+    padding: 0;
+    background: none; /* No background for text */
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.3s ease;
+}
+
+/* Hover effects for Discover India section */
+.explore-box:hover {
+    transform: scale(1.05);
+}
+
+.explore-box:hover h3 {
+    opacity: 1; /* Show text on hover */
+}
+
+.explore-box:hover img {
+    opacity: 0.3; /* Fade the image on hover */
+}
+
+.title {
+    text-align: center;
+    padding: 20px;
+}
+
+.aboutus {
+    font-size: 45px;
+    font-weight: 600;
+    text-align: center;
+    padding-top: 40px;
+    padding-bottom: 10px;
+    border: 20px;
+    margin: 20px;
+}
+
+.subtxt {
+    padding-right: 70px;
+    padding-left: 70px;
+    margin: 20px;
+    font-size: 24px;
+    text-align: justify;
+    text-align-last: center;
+}
+
+/* Dark mode taskbar */
+body.flipped-colors .taskbar {
+    background-color: #262137; /* Dark background */
+    color: white;
+}
+
+body.flipped-colors .taskbar .menu a {
+    color: white; /* Make menu text white */
+}
+
+body.flipped-colors .taskbar .menu a:hover {
+    color: #ccc; /* Slightly lighter on hover */
+}
+/* Dark mode for Discover India section */
+body.flipped-colors .discover-india {
+    background-color: #262137; /* Dark background */
+    color: white;
+}
+
+body.flipped-colors .explore-box {
+    background-color: #fdf8f8; 
+    color: white;
+}
+body.flipped-colors {
+    background-color: #262137; 
+    background-size: cover;
+    background-repeat: repeat; 
+    background-position: center;
+    background-attachment: fixed;
+    color: white;
+}
+body.flipped-colors .taskbar .title {
+    color: white;
+}
+
+body.flipped-colors .discover-india h2 {
+    color: white;
+}
+.flag-button {
+    position: fixed; 
+    bottom: 0px; 
+    right: 20px;
+    display: inline-block;
+    cursor: pointer;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+    z-index: 1000;
+}
+.flag-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.flag-img {
+    width: 100px;
+    height: auto;
+    border-radius: 8px;
+}
+
+.popup {
+    display: none; 
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+    z-index: 9999;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 800px;
+    height: 90%;
+    max-height: 600px;
+    position: relative;
+    overflow: auto; 
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+    color: black;
+}
+.calendar-container {
+    height: 410px;
+    width: 800px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-around;
+    overflow: auto; 
+}
+.month {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    width: 100%; /* Make sure it uses full width */
+    box-sizing: border-box; /* Include padding and borders in the width */
+}
+
+.month-header {
+    background-color: #ffffff;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+    border-bottom: 1px solid #fdfa67;
+}
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr); /* Seven columns for each day */
+    grid-auto-rows: minmax(60px, auto); /* Adjust rows to fit content */
+    gap: 1px; /* Small gap to ensure visibility */
+    box-sizing: border-box; /* Include padding and borders in the width */
+}
+
+.day, .date {
+    background-color: #f0f0f0;
+    text-align: center;
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+.day {
+    font-weight: bold;
+    background-color: #e0e0e0; /* Different color for day names */
+}
+.date {
+    text-align: center;
+    padding: 10px;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    transition: background-color 0.3s;
+    box-sizing: border-box; /* Include padding and borders in the width */
+}
+
+
+.date:hover {
+    background-color: #f9f9f9;
+}
+
+/* Add some spacing between the calendar days */
+.date:not(:nth-child(-n+7)) {
+    border-top: none;
+}
+
+/* Navigation buttons */
+.calendar-navigation {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.nav-button {
+    background-color: #f0f0f0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.nav-button:hover {
+    background-color: #ddd;
+}
+/* Diya Container */
+.diya-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px;
+    margin: 20px 0;
+    position: relative; /* Ensure the diya container is relative for absolute positioning of children */
+}
+
+/* Diya */
+.diya {
+    position: relative;
+    width: 50px;
+    height: 30px;
+    transform: perspective(500px) rotateX(5deg); /* 3D effect */
+}
+
+/* Bowl of the Diya (Flipped Bottom Part) */
+.bowl {
+    position: absolute;
+    bottom: 0;
+    width: 50px;
+    height: 30px;
+    background: #8B4513;
+    border-radius: 15% 15% 60% 60%;  /* Flipped: narrower top, wider base */
+    box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.5);  /* Enhanced shadow for 3D effect */
+    border-bottom: 5px solid #6f3c12;  /* Base thickness */
+    border-top: 2px solid #4a2c06;  /* Optional rim for added detail */
+    transform: translateY(5px); /* Slight adjustment to enhance 3D effect */
+}
+.wick {
+    position: absolute;
+    top: 3px;
+    left: 50%;
+    width: 10px;
+    height: 20px;
+    background-color: black;
+    transform: translateX(-50%);
+}
+
+.flame {
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    width: 15px;
+    height: 30px;
+    background-color: orange;
+    border-radius: 50% 50% 50% 50%;
+    transform: translateX(-50%);
+    animation: flicker 0.2s infinite alternate;
+}
+/* Flame Flicker Animation */
+@keyframes flicker {
+    0%, 100% {
+        transform: translateX(-50%) scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: translateX(-50%) scale(1.1);
+        opacity: 0.85;
+    }
+    80% {
+        transform: translateX(-50%) scale(1.05);
+        opacity: 0.9;
+    }
+}
+
+/* Extinguished Flame */
+.flame-extinguished {
+    animation: none;
+    opacity: 0;
+}

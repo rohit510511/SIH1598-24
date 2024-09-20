@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>BharatVarta</title>
+    <link rel="stylesheet" href="index.css"> <!-- Link to your CSS file -->
+</head>
+<body>
+    
+    <!-- Taskbar -->
+    <div class="taskbar">
+        <div class="title" onclick="goToHome()">BharatVarta</div>
+        <div class="menu">
+            <a href="#">Home</a>
+            <a href="home.html">Explore</a>
+            <a href="#">Nearby</a>
+            <a href="#">Favourites</a>
+            <input type="text" class="search-bar" placeholder="Search...">
+            <!-- Animated Diya Section -->
+<div class="diya-container">
+    <div class="diya">
+        <div class="flame" id="flame"></div>
+        <div class="wick"></div>
+        <div class="bowl"></div>
+    </div>
+</div>
+
+        </div>
+    </div>
+
+    <!-- Flex Boxes Section -->
+    <div class="container">
+        <div class="flex-box">
+            <div class="image-container">
+                <img src="a.jpg" alt="Random Image 1">
+                <a href="#" class="explore-btn">Explore</a>
+            </div>
+        </div>
+
+        <div class="flex-box">
+            <div class="image-container">
+                <img src="b.jpg" alt="Random Image 2">
+                <a href="Tajmahal.html" class="explore-btn">Explore</a>
+            </div>
+        </div>
+
+        <div class="flex-box">
+            <div class="image-container">
+                <img src="c.jpg" alt="Random Image 3">
+                <a href="#" class="explore-btn">Explore</a>
+            </div>
+        </div>
+
+        <div class="flex-box">
+            <div class="image-container">
+                <img src="d.jpg" alt="Random Image 4">
+                <a href="#" class="explore-btn">Explore</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="text">
+
+        <div class="aboutus">
+            ABOUT US
+        </div>
+        <div class="subtxt">
+            The mission of this website is to celebrate, preserve, and promote India's rich cultural heritage by documenting its diverse traditions,
+        art forms, historical landmarks, languages, and customs. It aims to educate global audiences,
+        foster pride among Indians, and support the preservation of endangered cultural practices.
+        Through interactive content, digital exhibits, and cultural tours, the platform encourages engagement with
+        India's heritage while promoting sustainable tourism and supporting local communities. Ultimately, it seeks to ensure that India's cultural legacy
+        is cherished and passed on to future generations.
+        </div>
+        
+    </div>
+
+<!-- Discover India Section -->
+<div class="discover-india">
+    <h2>DISCOVER INDIA</h2>
+    <div class="explore-section">
+        <div class="explore-container">
+            <a href="#" class="explore-box" id="music">
+                <div class="image-container">
+                    <img src="m.jpg" alt="Music Image">
+                </div>
+                <h3>Music</h3>
+            </a>
+            <a href="#" class="explore-box" id="art">
+                <div class="image-container">
+                    <img src="aa.jpg" alt="Art Image">
+                </div>
+                <h3>Art</h3>
+            </a>
+            <a href="#" class="explore-box" id="cuisine">
+                <div class="image-container">
+                    <img src="f.jpg" alt="Cuisine Image">
+                </div>
+                <h3>Cuisine</h3>
+            </a>
+            <a href="#" class="explore-box" id="history">
+                <div class="image-container">
+                    <img src="ddd.jpg" alt="History Image">
+                </div>
+                <h3>Dance</h3>
+            </a>
+            <a href="#" class="explore-box" id="architecture">
+                <div class="image-container">
+                    <img src="t.jpg" alt="Architecture Image">
+                </div>
+                <h3>Architecture</h3>
+            </a>
+            <a href="#" class="explore-box" id="nature">
+                <div class="image-container">
+                    <img src="dv.jpg" alt="Nature Image">
+                </div>
+                <h3>Festivals</h3>
+            </a>
+        </div>
+    </div>
+</div>
+<!-- Button to trigger popup -->
+<div class="flag-button" onclick="showPopup()">
+    <img src="ff.png" alt="Indian Flag" class="flag-img">
+</div>
+<!-- Popup Structure -->
+<div class="popup" id="popup">
+    <div class="popup-content">
+        <span class="close-btn" onclick="hidePopup()">&times;</span>
+        <h2>Festivals Calendar</h2>
+        <div class="calendar-navigation">
+            <button class="nav-button" id="prev-month">&#9664; Previous</button>
+            <button class="nav-button" id="next-month">Next &#9654;</button>
+        </div>
+        <div class="calendar-container" id="year-calendar">
+            <!-- Calendar will be dynamically inserted here -->
+        </div>
+    </div>
+</div>
+
+    <script src="scripts.js"></script> <!-- Link to the external JavaScript file -->
+</body>
+</html>
